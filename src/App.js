@@ -1,15 +1,18 @@
 import "./App.css";
 import MovieRow from "./MovieRow";
+import Banner from "./Banner";
 import requests from "./request";
+import Navbar from "./Navbar";
 
 function App() {
   return (
-    <div className="App">
-      <h1>NOT NETFLIX!</h1>
+    <div className="app">
+      <Navbar />
+      <Banner />
       <MovieRow
         title="NOT NETFLIX ORIGINALS"
-        getUrl={requests.getNetflixOriginals}
         isLarge
+        getUrl={requests.getNetflixOriginals}
       />
       <MovieRow title="TRENDING NOW" getUrl={requests.getTrending} />
       <MovieRow title="TOP RATED" getUrl={requests.getTopRated} />
