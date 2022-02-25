@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "./axios";
+import "./MovieRow.css";
 
 const base_url = "https://image.tmdb.org/t/p/original";
 
-export default function MovieRow({ title, getUrl }) {
+export default function MovieRow({ title, getUrl, isLarge }) {
   const [movies, setMovies] = useState([]);
 
   // when MovieRow is called, get information from database
@@ -23,8 +24,11 @@ export default function MovieRow({ title, getUrl }) {
         {movies.map((movie) => {
           return (
             <img
-              className="row-poster"
-              src={base_url + movie.poster_path}
+              key={movie.id}
+              className={`row-poster ${isLarge && "row_poster-large"}`}
+              src={`${base_url}${
+                isLarge ? movie.poster_path : movie.backdrop_path
+              }`}
               alt={movie.name}
             />
           );
