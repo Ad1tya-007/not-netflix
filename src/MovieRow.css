@@ -1,5 +1,11 @@
+.movie-row {
+  color: #fff;
+  margin-left: 20px;
+}
+
 .movie-row-posters {
   display: flex;
+  color: black;
   overflow-y: hidden;
   overflow-x: scroll;
   padding: 20px;
@@ -11,11 +17,11 @@
 
 .row-poster {
   object-fit: contain;
-  /*width: 100%;*/
-  max-height: 150px;
+  width: 100%;
+  max-height: 100px;
   margin-right: 10px;
-  opacity: 0.9;
   transition: transform 500ms;
+  opacity: 0.9;
 }
 
 .row-poster:hover {
@@ -25,11 +31,11 @@
 
 .row-poster-large {
   object-fit: contain;
-  /*width: 100%;*/
-  max-height: 300px;
+  width: 100%;
+  max-height: 200px;
   margin-right: 10px;
-  opacity: 0.9;
   transition: transform 500ms;
+  opacity: 0.9;
 }
 
 .row-poster-large:hover {

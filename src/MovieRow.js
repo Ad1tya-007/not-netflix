@@ -25,7 +25,7 @@ export default function MovieRow({ title, getUrl, isLarge }) {
           return (
             <img
               key={movie.id}
-              className={`row-poster ${isLarge && "row_poster-large"}`}
+              className={`row-poster ${isLarge && "row-poster-large"}`}
               src={`${base_url}${
                 isLarge ? movie.poster_path : movie.backdrop_path
               }`}
