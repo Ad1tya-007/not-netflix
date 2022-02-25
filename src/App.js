@@ -9,6 +9,7 @@ function App() {
       <MovieRow
         title="NOT NETFLIX ORIGINALS"
         getUrl={requests.getNetflixOriginals}
+        isLarge
       />
       <MovieRow title="TRENDING NOW" getUrl={requests.getTrending} />
       <MovieRow title="TOP RATED" getUrl={requests.getTopRated} />
